@@ -1,0 +1,21 @@
+---
+layout: home
+---
+
+<table>
+
+  <tr>
+    <th>Zur Übersichtsseite</th>
+    <th>ISBN</th>
+    <th>Zur PDF-Datei</th>
+  </tr>
+
+{% for item in site.books %}
+  <tr>
+    <td><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></td>
+    <td>{{ item.isbn }}</td>
+    <td><a href="{{ site.baseurl }}/books/{{ item.short }}.pdf">PDF</a></td>
+  </tr>
+{% endfor %}
+
+</table>

@@ -1,0 +1,22 @@
+title: Musik-Schulbücher
+email: chrismueller@eclipso.de
+description: >-
+  Eine Sammlung von alten, vergriffen Musik-Schulbüchern
+baseurl: "/musik-schulbuecher"
+url: "https://chris-mueller.github.io"
+github_username:  chris-mueller
+markdown: kramdown
+theme: minima
+
+collections:
+  books:
+    name: Bücher
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "books"
+    values:
+      layout: books

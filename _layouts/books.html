@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<h2>{{ page.title }}</h2>
+
+{% capture asset_url %}{{ site.baseurl }}/books/{{ page.short }}{% endcapture %}
+
+<a href="{{ asset_url }}.pdf"><img src="{{ asset_url }}.jpg"></a>
+
+
+<table>
+
+  <tr>
+    <td><strong>Titel</strong></td>
+    <td>{{ page.title }}</td>
+  </tr>
+
+  <tr>
+    <td><strong>Autoren</strong></td>
+    <td>{{ page.creators }}</td>
+  </tr>
+
+  <tr>
+    <td><strong>Verlag</strong></td>
+    <td>{{ page.publisher }}</td>
+  </tr>
+
+  <tr>
+    <td><strong>ISBN</strong></td>
+    <td>{{ page.isbn }}</td>
+  </tr>
+
+  <tr>
+    <td><strong>Erscheinungsjahr</strong></td>
+    <td>{{ page.year }}</td>
+  </tr>
+
+</table>
+
+<p>
+  Die PDF-Datei des Buches ansehen:
+  <a href="{{ asset_url }}.pdf">{{ page.short }}.pdf</a>
+</p>
+
+<p>
+  Die PDF-Datei des Buches herunterladen:
+  <a href="{{ asset_url }}.pdf" download>{{ page.short }}.pdf</a>
+</p>
+
+{{ page.content }}
